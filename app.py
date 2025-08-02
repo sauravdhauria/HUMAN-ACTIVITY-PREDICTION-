@@ -25,10 +25,11 @@ def main():
     st.subheader('''Predict human activity in real time using wearable sensor inputs. Enter the required values to get the predicted activity.''')
     st.image('image.webp')
 
-    rfid = st.dropbox('Enter the RFID configuration settings',['Config 1 (4 Sensors)','Config 2 (3 Sensors)'])
+    rfid = st.selectbox('Enter the RFID configuration settings',['Config 1 (4 Sensors)','Config 2 (3 Sensors)'])
+
     rfid_e = (lambda x: 3 if x=='Config 2(3 Sensors)' else 4)(rfid)
 
-    ant_ID = st.dropbox('Select the Antena ID',[1,2,3,4])
+    ant_ID = st.selectbox('Select the Antena ID',[1,2,3,4])
     rssi = st.text_input('Enter the received signal strength indicator (RSSI)')
     accv = st.text_input('Enter the vertical accelerationdata from sensor')
     accf = st.text_input('Enter the frontal accelerationdata from sensor')
@@ -42,3 +43,4 @@ def main():
 
 if __name__=='__main__':
     main()
+
