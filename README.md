@@ -1,4 +1,5 @@
 # HUMAN-ACTIVITY-PREDICTION-
+app link : https://humanactivitypredbysd.streamlit.app/
 stramlit.app       
 This Streamlit web application is designed to predict human physical activity in real-time based on input sensor data. The prediction is made using a machine learning model (loaded from final_model.joblib) trained on wearable sensor inputs.
 
